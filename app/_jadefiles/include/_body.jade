@@ -3,6 +3,9 @@ body
 		.back_img
 			.oval_1
 				img(src="img/oval_1.png")
+				span.meditation Meditation
+				span.execut Executiveskills
+				span.fear fear
 			.oval_2
 				img(src="img/oval_2.png")
 			.oval_3
@@ -22,19 +25,11 @@ body
 			.row
 				.col-3
 					.logo
+						p Aware
+							span  Now
 				.col-6
 					nav.menu
-						ul
-							li
-								a(href="#") Terms and Conditions
-							li
-								a(href="#") About Aware
-							li
-								a(href="#") Contact
-							li
-								a(href="#") Customer Service
-							li
-								a(href="#") FAQ
+						+nav_menu(menu)
 				.col-3
 					.button.sign
 						i.arrow
@@ -43,6 +38,7 @@ body
 					.button.login
 						i.arrow
 						span Login
+
 
 
 

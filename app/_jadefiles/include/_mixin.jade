@@ -1,5 +1,8 @@
-
-
+mixin nav_menu(menu)
+	ul
+		each m in menu
+			li
+				a(href="#{m.link}") #{m.item}
 
 
 

@@ -43,7 +43,7 @@ function log(error) {
 }
 
 gulp.task('jade', function() {
-	return gulp.src(['./app/_jadefiles/**/*.jade', '!./src/jade/**/_*.jade'])
+	return gulp.src(['./app/_jadefiles/**/*.jade', '!./app/_jadefiles/**/_*.jade'])
 	.pipe(jade( {
 		pretty: true
 	}).on('error', log))
