@@ -1,0 +1,60 @@
+$width: 100
+$gutter: 10
+$columns: 12
+//color
+
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+body
+	font-family: PS_Sans, Arial, Helvetica, sans-serif
+	color: #000
+
+article, aside, details, figcaption, figure, footer, header, menu,
+nav, section
+	display: block
+
+img
+	max-width: 100%
+
+
+
+.container::before, .container::after,
+.row::before, .row::after,
+.clear::before, .clear::after
+	content: " "
+	display: table
+	
+.container::before, .container::after,
+.row::before, .row::after,
+.clear::after
+	clear: both
+
+
+// loop for responsive design
+
+.container
+	margin-left: auto
+	margin-right: auto
+	padding-left: $gutter + px
+	padding-right: $gutter + px
+	.row
+		margin-left: -$gutter + px
+		margin-right: -$gutter + px
+		&>[class*="col-"]
+			position: relative
+			min-height: 1px
+			float: left
+			padding-left: $gutter + px
+			padding-right: $gutter + px
+
+@for $i from 1 through $columns
+	.col-#{$i}
+		width: (($width/ $columns) * $i) * 1%
+
+
+
+
