@@ -4,5 +4,9 @@ mixin nav_menu(menu)
 			li
 				a(href="#{m.link}") #{m.item}
 
+mixin svg(name, path)
+	svg(class="#{name}" role="img")
+		use(id="#{name}" xlink:href="img/#{path}.svg##{name}")
+
 
 
