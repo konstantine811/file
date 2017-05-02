@@ -461,8 +461,8 @@ header {
         line-height: 30px;
         font-weight: 600; }
       .how_work .section_how figure .number {
-        position: absolute;
-        top: 0%;
+        position: relative;
+        bottom: 93px;
         right: 50%;
         color: #C7D0D6;
         font-size: 84px;
@@ -484,29 +484,40 @@ header {
           left: -10%;
           font-size: 14px;
           line-height: 16px; }
-    .how_work .section_how .button_figure {
-      position: absolute;
-      right: 4%;
-      font-weight: 600;
-      top: 10%;
-      z-index: 1000; }
-    .how_work .section_how .button_prev, .how_work .section_how .button_next {
-      display: inline-block;
-      margin-left: 8vw; }
-    .how_work .section_how .button_prev {
-      background-image: url("../img/left.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: top right;
-      padding: 0px 50px;
-      cursor: pointer; }
-    .how_work .section_how .button_next {
-      background-image: url("../img/right.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: top left;
-      padding: 0px 50px;
-      cursor: pointer; }
+      .how_work .section_how figure .slick-prev {
+        background-image: url("../img/left.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 24px;
+        left: 996px;
+        cursor: pointer;
+        z-index: 1000; }
+        .how_work .section_how figure .slick-prev::before {
+          font-family: Lato;
+          font-size: 14px;
+          color: black;
+          content: 'Prev';
+          position: absolute;
+          right: 40px;
+          top: 0;
+          font-weight: 600; }
+      .how_work .section_how figure .slick-next {
+        position: absolute;
+        top: 24px;
+        right: 242px;
+        background-image: url("../img/right.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer; }
+        .how_work .section_how figure .slick-next::before {
+          font-family: Lato;
+          font-size: 14px;
+          color: black;
+          content: 'Next';
+          position: absolute;
+          left: 40px;
+          top: 0;
+          font-weight: 600; }
 
 .review {
   position: relative; }
@@ -528,7 +539,9 @@ header {
     .review .title_txt p {
       margin-bottom: 2%; }
   .review .block-for-slider {
-    position: relative; }
+    position: relative;
+    z-index: 100;
+    overflow: hidden; }
     .review .block-for-slider ul li {
       list-style: none;
       overflow: hidden; }
@@ -539,7 +552,8 @@ header {
         margin-top: -20%;
         z-index: 2; }
       .review .block-for-slider ul li .about_txt {
-        position: relative; }
+        position: relative;
+        top: -150px; }
         .review .block-for-slider ul li .about_txt h3 {
           margin-top: 50px;
           font-size: 25px;
@@ -552,133 +566,115 @@ header {
           font-size: 12px;
           line-height: 28px;
           font-weight: 300;
-          color: #B5C6CA; }
+          color: #B5C6CA;
+          width: 30%; }
       .review .block-for-slider ul li .number {
-        position: absolute;
-        right: 45%;
-        top: -10%;
+        position: relative;
+        left: 49%;
+        margin-bottom: 4%;
         font-size: 82px;
         color: #C7D0D6;
         font-weight: 600; }
       .review .block-for-slider ul li .side {
-        position: absolute;
+        position: relative;
         -webkit-transform: rotate(90deg);
             -ms-transform: rotate(90deg);
                 transform: rotate(90deg);
-        margin-left: -8%;
-        bottom: 40%;
-        height: 100%;
-        z-index: 1000;
-        padding-left: 34px; }
-        .review .block-for-slider ul li .side h4 {
-          font-size: 18px;
-          color: #10BCBF;
-          font-weight: 300; }
+        width: 20%;
+        top: 233px;
+        right: -4%; }
         .review .block-for-slider ul li .side img {
-          -webkit-transform: rotate(-90deg);
-              -ms-transform: rotate(-90deg);
-                  transform: rotate(-90deg);
-          width: 15px;
+          width: 18px;
           position: absolute;
-          top: 29px;
-          left: 0px; }
+          bottom: 58%;
+          left: -30px; }
+        .review .block-for-slider ul li .side h4 {
+          font-size: 24px;
+          color: #10BCBF; }
         .review .block-for-slider ul li .side span {
-          font-size: 10px;
-          color: #32495B;
-          display: inline-block;
-          margin-top: 10px; }
-    .review .block-for-slider .select-img ul li {
-      position: relative;
-      right: 33%;
-      top: -140px;
-      list-style: none;
-      display: inline; }
-      .review .block-for-slider .select-img ul li img {
-        width: 6%;
-        margin-right: 2%;
-        border: 1px solid transparent;
+          color: #B5C6CA;
+          font-weight: 600;
+          font-size: 12px; }
+    .review .block-for-slider .select-img {
+      width: 530px;
+      cursor: pointer;
+      bottom: 168px;
+      right: 19%;
+      display: block;
+      margin: 0 auto; }
+      .review .block-for-slider .select-img .slick-slide img {
+        margin: 0 auto;
+        padding: 10%;
+        border: none;
+        -webkit-transition: border 0.5s ease-in-out;
+        transition: border 0.5s ease-in-out; }
+      .review .block-for-slider .select-img .slick-current img {
+        border: 1px solid #B5C6CA;
         -webkit-border-radius: 10px;
                 border-radius: 10px;
-        padding: 0.8%;
-        -webkit-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-        cursor: pointer; }
-        .review .block-for-slider .select-img ul li img:hover {
-          border: 1px solid #32495B; }
-    .review .block-for-slider .button_figure {
-      position: absolute;
-      left: 15%;
-      font-weight: 600;
-      font-size: 12px;
-      bottom: -10%;
-      z-index: 1000; }
-      .review .block-for-slider .button_figure .button_prev, .review .block-for-slider .button_figure .button_next {
-        display: inline-block;
-        margin-left: 3vw;
-        margin-bottom: 110px;
-        margin-right: 10vw;
-        padding: 0 20px; }
-      .review .block-for-slider .button_figure .button_prev {
-        background-image: url("../img/left.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: top right;
-        padding-right: 50px;
-        cursor: pointer; }
-      .review .block-for-slider .button_figure .button_next {
-        background-image: url("../img/right.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: top left;
-        padding-left: 50px;
-        cursor: pointer; }
-      .review .block-for-slider .button_figure #nav-btns {
-        position: absolute;
-        bottom: 44%;
-        padding: 0;
-        right: 55%;
-        margin: 0;
-        display: inline-block;
-        text-align: center; }
-      .review .block-for-slider .button_figure .slide-nav-btn {
-        position: relative;
-        display: inline-block;
-        list-style: none;
-        width: 10px;
-        height: 10px;
-        background-color: #B5C6CA;
-        -webkit-border-radius: 50%;
-                border-radius: 50%;
-        margin: 5px;
-        cursor: pointer;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        -webkit-border-radius: 1px solid #B5C6CA;
-                border-radius: 1px solid #B5C6CA; }
-        .review .block-for-slider .button_figure .slide-nav-btn:hover {
-          -webkit-transform: scale(1.3);
-              -ms-transform: scale(1.3);
-                  transform: scale(1.3); }
-      .review .block-for-slider .button_figure ul li {
-        position: relative;
-        bottom: 125px;
-        left: 29%;
-        list-style: none;
-        display: inline-block;
-        -webkit-border-radius: 50%;
-                border-radius: 50%;
-        margin-left: 1.5vw;
-        width: 7px;
-        height: 7px;
-        cursor: pointer;
-        background-color: #B5C6CA;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out; }
-        .review .block-for-slider .button_figure ul li:hover {
-          background-color: #F82140;
-          -webkit-transform: scale(1.3);
-              -ms-transform: scale(1.3);
-                  transform: scale(1.3); }
+        padding: 10%; }
+    .review .block-for-slider .slick-initialized .slick-slide {
+      outline: none; }
+
+.viewport .slick-prev {
+  background-image: url("../img/left.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 100%;
+  left: 478px;
+  cursor: pointer;
+  z-index: 100;
+  position: absolute; }
+  .viewport .slick-prev::before {
+    font-family: Lato;
+    font-size: 14px;
+    color: black;
+    content: 'Prev';
+    position: absolute;
+    right: 40px;
+    top: 0;
+    font-weight: 600; }
+
+.viewport .slick-next {
+  position: absolute;
+  top: 100%;
+  left: 677px;
+  z-index: 100;
+  background-image: url("../img/right.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer; }
+  .viewport .slick-next::before {
+    font-family: Lato;
+    font-size: 14px;
+    color: black;
+    content: 'Next';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    font-weight: 600; }
+
+.viewport .slick-dots li.slick-active button:before {
+  color: #F82140;
+  border: 1px solid #B5C6CA;
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+
+.viewport .slick-dots {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  top: 98.3%;
+  left: 529px; }
+
+.viewport .slick-dots li button:before {
+  width: 12.2px;
+  height: 12px;
+  line-height: 13px;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out; }
 
 .coaches {
   height: 100%;
@@ -691,7 +687,8 @@ header {
   .coaches .coaches_sld {
     width: 70%;
     margin: 0 auto;
-    margin-top: 3%; }
+    margin-top: 3%;
+    z-index: 1; }
     .coaches .coaches_sld h4 {
       color: #32495B;
       margin-bottom: 3%; }
@@ -787,9 +784,12 @@ header {
             border-radius: 50%; }
   .coaches .slick-dots {
     position: absolute;
-    display: inline-block;
-    top: 325px;
-    right: 190px; }
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    top: 329px;
+    left: 196px; }
   .coaches .slick-dots li button:before {
     width: 12.2px;
     height: 12px;
@@ -1115,18 +1115,14 @@ footer .border_top {
 
 footer .logo {
   position: relative;
-  display: inline-block;
-  left: 5%; }
+  left: 26%; }
   footer .logo img {
-    position: absolute;
-    top: -50%;
-    left: 100%;
+    position: relative;
     margin-bottom: 70px; }
   footer .logo .circle {
     position: absolute;
-    top: 25px;
-    left: 105px;
-    width: 4px;
+    top: 34px;
+    left: 22px;
     border: 4px solid #10BCBF;
     -webkit-border-radius: 50%;
             border-radius: 50%;
@@ -1134,13 +1130,13 @@ footer .logo {
             box-shadow: 0 0 11px 0 rgba(16, 188, 191, 0.8); }
   footer .logo p {
     position: relative;
-    left: 150px;
-    top: 15px; }
+    left: 62px;
+    bottom: 112px; }
     footer .logo p span {
       color: #10BCBF; }
 
 footer .social {
-  margin-top: 15px;
+  margin-top: 28px;
   color: #B5C6CA;
   font-size: 14px;
   position: relative;
@@ -1149,13 +1145,20 @@ footer .social {
     padding: 0 20px; }
 
 footer .link {
-  margin-top: 15px;
+  margin-top: 28px;
   color: #B5C6CA;
   font-size: 14px;
-  position: relative;
-  margin-left: 4%; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -3vw; }
   footer .link span {
-    padding: 0 20px; }
+    padding: 0 4%; }
   footer .link a {
     text-decoration: none;
     color: #B5C6CA; }
